@@ -60,4 +60,60 @@ function parolaPalindroma (parolaUtente, parolaInvertita) {
 
 
 
+/*
+L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+Sommiamo i due numeri
+Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+Dichiariamo chi ha vinto.
+*/
+
+
+
+// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+let pariODispari = prompt('Scrivi pari o dispari');
+let numero = parseInt(prompt('Scegli un numero da 1 a 5'));
+
+console.log(pariODispari, numero);
+
+
+//Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+let random = Math.floor(Math.random()*5) + 1;
+
+function numeroRandom () {
+    randomNumber = Math.floor(Math.random()*5) + 1;
+    return randomNumber;
+    //sommiamo i due numeri
+        
+}
+console.log('il numero random è ' + random);
+
+
+// funzione della somma
+function sommaNumeri () {
+    console.log('la somma è ' + numero + random);
+    if (sommaNumeri % 2 == 0) {
+        console.log('La funzione è pari')
+    } else {
+        console.log('La funzione non è pari')
+    }
+}
+
+sommaNumeri (numero, random);
+
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+
+
+
+/*function sommaNumeri (numero, random) {
+    alert (numero + random);
+}
+
+sommaNumeri (numero + random);
+console.log('La somma è ' + sommaNumeri);
+
+console.log('il numero scelto è ' + numero)
+console.log('il numero del computer è ' + random)*/
+
+
 
