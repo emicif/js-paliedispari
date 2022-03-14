@@ -14,7 +14,8 @@ sommaNumeri (2, 6);
 
 
 
-/* Chiedere all’utente di inserire una parola
+/* ESERCIZIO 1
+Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 */
 
@@ -22,34 +23,32 @@ Creare una funzione per capire se la parola inserita è palindroma
 // leggo parola inserita dall'utente
 // chiedo a js di leggere la parola al contrario
 
-// se uguale stampo "palindroma"
-// altrimenti stampo "non palindroma"
 
 
 
-// chiedo con prompt utente di inserire parola
+// chiedo con all'utente di inserire parola
 let parolaUtente = prompt('Inserisci una parola palindroma');
-// parolaUtente.reverse()
+
 
 // scompongo la parola utente per avere gli elementi
 let parolaDivisa = parolaUtente.split('');
-console.log(parolaDivisa);
 
 
 // vado a capire se la parola inversa è uguale al contrario della parolaDivisa
 let parolaInversaDivisa = parolaDivisa.reverse('');
-console.log('Parola inversa divisa ' + parolaInversaDivisa);
+
 
 // a questo punto devo rimettere insieme gli elementi suddivisi prima con split
 let parolaInvertita = parolaInversaDivisa.join('');
-console.log('Parola invertita ' + parolaInvertita);
 
+
+// se uguale stampo "palindroma"
+// altrimenti stampo "non palindroma"
 if (parolaUtente === parolaInvertita) {
     console.log('La parola inserita è palindroma')
 } else {
     console.log('La parola inserita NON è palindroma');
 }
-
 
 
 // preparo la funzione
@@ -60,7 +59,7 @@ function parolaPalindroma (parolaUtente, parolaInvertita) {
 
 
 
-/*
+/* ESERCIZIO 2
 L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 Sommiamo i due numeri
@@ -82,16 +81,16 @@ let random = Math.floor(Math.random()*5) + 1;
 
 function numeroRandom () {
     randomNumber = Math.floor(Math.random()*5) + 1;
-    return randomNumber;
-    //sommiamo i due numeri
-        
+    return randomNumber;        
 }
+
 console.log('il numero random è ' + random);
 
 
+let somma = numero + random;
 // funzione della somma
 function sommaNumeri () {
-    let somma = numero + random;
+    
     console.log('la somma è ' + somma);
     if (somma % 2 == 0) {
         console.log('La funzione è pari')
@@ -100,9 +99,20 @@ function sommaNumeri () {
     }
 }
 
-// sommaNumeri (numero, random);
+sommaNumeri (numero, random);
 
 
-sommaNumeri (1, 3);
+// Dichiariamo chi ha vinto.
+// se l'utente ha inserito pari e la sommaNumeri è pari -> vinto utente
+// se utente ha inserito "dispari" e la somma è pari -> vinto computer
+// se l'utente ha inserito "dispari" e la sommaNumero è dispari -> vinto utente
+// se l'utente ha inserito "dispari" e la sommaNumero è pari -> vinto pc
 
+if(pariODispari == 'pari' && somma % 2 == 0){ 
+    console.log("ha vinto l'utente")
+} else if (pariODispari == 'dispari' && somma % 2 !== 0) {
+    console.log("ha vinto l'utente")
+} else {
+    console.log('ha vinto il pc'); 
+} 
 
