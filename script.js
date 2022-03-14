@@ -45,30 +45,19 @@ let parolaInvertita = parolaInversaDivisa.join('');
 console.log('Parola invertita ' + parolaInvertita);
 
 if (parolaUtente === parolaInvertita) {
-    console.log('Parola palindroma')
+    console.log('La parola inserita è palindroma')
 } else {
-    console.log('NON palindroma');
+    console.log('La parola inserita NON è palindroma');
 }
 
 
-/*
-    if (parolaUtente === parolaInvertita) {
-        console.log('La parola è palindroma');
 
-    } else {
-        console.log('La parola non è palindroma')
-    }
-
-
-function invertiParola (parolaUtente, parolaInvertita) {
-    let risultato = (parolaUtente.reverse === parolaInvertita);
+// preparo la funzione
+function parolaPalindroma (parolaUtente, parolaInvertita) {
+    let risultato = (parolaUtente === parolaInvertita);
     return risultato;
 }
 
 
 
-// stampo in base alla situazione
-//console.log('La parola inserita è palindroma: ' + parolaUtente);
-//console.log('La parola inserita non è palindroma: ' + parolaUtente);
 
-*/
