@@ -100,8 +100,9 @@ function sommaNumeri () {
     }
 }
 
-sommaNumeri (numero, random);
+// sommaNumeri (numero, random);
 
 
+sommaNumeri (1, 3);
 
 
