@@ -91,8 +91,9 @@ console.log('il numero random è ' + random);
 
 // funzione della somma
 function sommaNumeri () {
-    console.log('la somma è ' + numero + random);
-    if (sommaNumeri % 2 == 0) {
+    let somma = numero + random;
+    console.log('la somma è ' + somma);
+    if (somma % 2 == 0) {
         console.log('La funzione è pari')
     } else {
         console.log('La funzione non è pari')
@@ -101,19 +102,6 @@ function sommaNumeri () {
 
 sommaNumeri (numero, random);
 
-// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-
-
-
-/*function sommaNumeri (numero, random) {
-    alert (numero + random);
-}
-
-sommaNumeri (numero + random);
-console.log('La somma è ' + sommaNumeri);
-
-console.log('il numero scelto è ' + numero)
-console.log('il numero del computer è ' + random)*/
 
 
 
