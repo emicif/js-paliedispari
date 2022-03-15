@@ -53,7 +53,7 @@ console.log('il numero random è ' + random);
 /*let random = generateRandomNumer(1, 5);
 
 function generateRandomNumer (min, max) {
-    const range =max -min + 1;
+    const range = max -min + 1;
     const number = Math.floor(Math.random() * range) + min;
     return number;
 }*/
