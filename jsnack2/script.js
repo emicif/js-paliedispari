@@ -1,20 +1,5 @@
 console.log('JS OK');
 
-/*
-function miafunzione() {
-    //blocco di codice
-}
-
-function sommaNumeri (num1, num2) {
-    alert (num1 + num2);
-}
-
-sommaNumeri (2, 6);
-*/
-
-
-
-
 
 /* ESERCIZIO 2
 L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -26,22 +11,52 @@ Dichiariamo chi ha vinto.
 
 
 
-// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+// L’utente sceglie pari o dispari 
 let pariODispari = prompt('Scrivi pari o dispari');
+
+
+//faccio controllo
+while(!pariODispari || (pariODispari !== 'pari' && pariODispari !== 'dispari')) {
+    pariODispari = prompt('Scrivi pari o dispari');
+}
+
+
+
+// inserisce un numero da 1 a 5.
 let numero = parseInt(prompt('Scegli un numero da 1 a 5'));
+
+
+//faccio controllo
+while (isNaN(numero) || numero > 5 || numero < 1){
+    numero = parseInt(prompt('Scegli un numero da 1 a 5'));
+}
+
 
 console.log(pariODispari, numero);
 
 
-//Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-let random = Math.floor(Math.random()*5) + 1;
 
-function numeroRandom () {
+
+//Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+let random = generateRandomNumer(); //Math.floor(Math.random()*5) + 1;
+
+function generateRandomNumer () {
     randomNumber = Math.floor(Math.random()*5) + 1;
     return randomNumber;        
 }
 
 console.log('il numero random è ' + random);
+
+
+
+// FUNZIONE PER IL RANDOM
+/*let random = generateRandomNumer(1, 5);
+
+function generateRandomNumer (min, max) {
+    const range =max -min + 1;
+    const number = Math.floor(Math.random() * range) + min;
+    return number;
+}*/
 
 
 let somma = numero + random;
